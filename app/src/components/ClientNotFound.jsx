@@ -29,7 +29,7 @@ const ClientNotFound = ({setClient, client, setClientNotFound}) => {
 	};
 
 	const create = async () => {
-		await axios.post('http://localhost:3001/clients', client);
+		await axios.post('https://ultracar.vercel.app/clients', client);
 
 		setClientNotFound(false);
 		setOrder((order) => ({...order, client_name: client.name}));

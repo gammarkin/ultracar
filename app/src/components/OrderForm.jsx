@@ -26,7 +26,7 @@ export default function OrderForm() {
 
 	const searchClient = async (cpf) => {
 		const clientData = await (
-			await fetch(`http://localhost:3001/clients/${cpf}`)
+			await fetch(`https://ultracar.vercel.app/clients/${cpf}`)
 		).json();
 
 		if (!clientData.name) return setClientNotFound(true);
@@ -55,7 +55,7 @@ export default function OrderForm() {
 			await new Promise((resolve) => setTimeout(resolve, 100));
 		}
 
-		await axios.post('http://localhost:3001/orders', order);
+		await axios.post('https://ultracar.vercel.app/orders', order);
 	};
 
 	return (

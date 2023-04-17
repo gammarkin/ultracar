@@ -19,7 +19,7 @@ const SearchInput = () => {
 		setLoading(true);
 
 		const products = await (
-			await fetch(`http://localhost:3001/products/${search}`)
+			await fetch(`https://ultracar.vercel.app/products/${search}`)
 		).json();
 
 		setProducts(products);
