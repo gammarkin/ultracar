@@ -8,6 +8,7 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
+app.get('/', (_, res) => res.status(200).json({ message: 'Hey!' }));
 app.use('/products', routes.Products);
 app.use('/clients', routes.Clients);
 app.use('/orders', routes.Orders);
