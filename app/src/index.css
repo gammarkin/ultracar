@@ -1,0 +1,35 @@
+.U__carLogo {
+	width: 20%;
+}
+
+.product {
+	cursor: pointer;
+	border: 1px solid #ccc;
+	margin: 1rem;
+}
+
+.ant-btn-- {
+	margin: 1rem;
+}
+
+.lope-- {
+	margin: 0.4rem 0;
+}
+
+.check-- {
+	margin: 0.9rem;
+}
+
+header {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+main {
+	display: flex;
+}
+
+main section {
+	width: 50%;
+}
