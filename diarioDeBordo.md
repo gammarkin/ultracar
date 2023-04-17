@@ -6,3 +6,6 @@ Tentei adicionar a biblioteca AntDesign para facilitar um pouco na hora da estil
 
 Consegui adicionar o backend que cria uma api que está online, e é consumida pela [solução](https://ultracar-app.vercel.app/), 
 então fiquei feliz que pude atingir resultados. 
+
+Decidi por criar uma aplicação full-stack pela facilidade de adaptar no futuro, caso necessite de mudanças, e além disso,
+foquei mais na experiência da pessoa que gerência o aplicativo.
