@@ -2,7 +2,7 @@ import { model as mongooseCreateModel, Schema } from 'mongoose';
 
 const WorkSchema = new Schema(
     {
-        id: { type: Number },
+        id: { type: String },
         client_name: { type: String },
         worker_name: { type: String },
         job: { type: String },

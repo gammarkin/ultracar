@@ -4,6 +4,7 @@ import {MyContext} from '../context/MyContext';
 import ClientNotFound from './ClientNotFound';
 import ClientQrCode from './ClientQrCode';
 import {v4 as uuidv4} from 'uuid';
+import axios from 'axios';
 
 const {Search} = Input;
 
@@ -41,13 +42,20 @@ export default function OrderForm() {
 		setOrder((order) => ({
 			...order,
 			jobs: order.products
-				? `trocado as peças ${order.products.map((product) => `${product} ,`)}`
+				? `trocado as peças ${order.products.reduce(
+						(acc, {name}) => acc + `${name} `,
+						''
+				  )}`
 				: 'não foi trocado nenhuma peça',
 			date: new Date().toLocaleDateString(),
 			id: uuidv4(),
 		}));
 
-		return axios.post('http://localhost:3001/orders', order);
+		while (!order.worker_name || !order.date || !order.job) {
+			await new Promise((resolve) => setTimeout(resolve, 100));
+		}
+
+		await axios.post('http://localhost:3001/orders', order);
 	};
 
 	return (
